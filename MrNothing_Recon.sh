@@ -36,7 +36,7 @@ fail() { echo -e "${RED}[!]${NC} $1"; }
 have() { command -v "$1" >/dev/null 2>&1; }
 
 # ------------------------------ Timing helpers --------------------------------
-# Formats a duration in seconds as e.g. "1h 02m 03s", "02m 03s", or "3s"
+
 fmt_duration() {
     local total=$1 h m s
     h=$(( total / 3600 ))
@@ -265,7 +265,7 @@ else
     nmap -iL "$SCAN_TARGETS" -Pn -T4 --top-ports "$TOP_PORTS" --min-rate "$NMAP_MIN_RATE" \
          -oN "${OUTDIR}/${PORT_SCAN_FILE}" -oG "${OUTDIR}/.nmap_grep_tmp" > /dev/null
 
-    # Parse nmap's greppable output into the same "host:p1,p2,p3" format
+    # Parse nmap's greppable output into the same format
     awk -F'\t' '
     /Ports:/ {
         split($1, hp, " "); ip = hp[2]
@@ -290,8 +290,6 @@ step_end "[5/6] Port scan"
 
 # ==============================================================================
 # STEP 6 -- Service / version detection
-#           (scoped to exactly the ports found open in step 5 -- much faster
-#            and just as accurate as blindly re-scanning every host/port again)
 # ==============================================================================
 step_begin
 info "[6/6] Running service/version detection on discovered open ports..."
