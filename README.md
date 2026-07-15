@@ -17,19 +17,42 @@ MrNothing_Recon automates the tedious early phases of security engagements by ch
 
  🛠️ Prerequisites & InstallationThe pipeline relies on a few core tools.
  
-Make sure they are installed and available in your system's $PATH.Required CoreBashsudo apt update && sudo apt install nmap -y
+Make sure they are installed and available in your system's $PATH.
+
+Required CoreBashsudo apt update && sudo apt install nmap -y
+  
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-Highly Recommended (For Maximum Speed & Features)If these are missing, the script will gracefully switch to slower, native Linux fallbacks:  Bashgo install github.com/projectdiscovery/httpx/cmd/httpx@latest
+  
+
+Highly Recommended (For Maximum Speed & Features)If these are missing, the script will gracefully switch to slower, native Linux fallbacks: 
+
+Bashgo install 
+
+github.com/projectdiscovery/httpx/cmd/httpx@latest
+
 go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+
 go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
 go install github.com/sensepost/gowitness@latest
 
 
 
+
+
+
 💻 UsageClone this repository and navigate into it:Bashgit clone https://github.com/mrnothing8262/MrNothing_Recon.git
+
 cd MrNothing_Recon
+
 Make the script executable:Bashchmod +x MrNothing_Recon.sh
+
 Run it against an authorized target domain:  Bash./MrNothing_Recon.sh example.com
+
+
+
+
+
 
 
 Output StructureThe script dynamically creates a structured output folder named recon_<domain>_<timestamp>/ containing organized artifacts:  
@@ -49,6 +72,9 @@ Plaintext📂 recon_example.com_20260715_164500/
 ├── 📄 Service_Scan_alive_subs  # In-depth nmap service fingerprints
 
 └── 📂 screenshots/             # Visual gowitness captures
+
+
+
 
 
 
