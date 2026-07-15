@@ -26,7 +26,7 @@ go install github.com/sensepost/gowitness@latest
 
 
 
-💻 UsageClone this repository and navigate into it:Bashgit clone https://github.com/YOUR_USERNAME/MrNothing_Recon.git
+💻 UsageClone this repository and navigate into it:Bashgit clone https://github.com/mrnothing8262/MrNothing_Recon.git
 cd MrNothing_Recon
 Make the script executable:Bashchmod +x MrNothing_Recon.sh
 Run it against an authorized target domain:  Bash./MrNothing_Recon.sh example.com
