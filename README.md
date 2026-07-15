@@ -32,14 +32,24 @@ Make the script executable:Bashchmod +x MrNothing_Recon.sh
 Run it against an authorized target domain:  Bash./MrNothing_Recon.sh example.com
 
 
-Output StructureThe script dynamically creates a structured output folder named recon_<domain>_<timestamp>/ containing organized artifacts:  Plaintext📂 recon_example.com_20260715_164500/
+Output StructureThe script dynamically creates a structured output folder named recon_<domain>_<timestamp>/ containing organized artifacts:  
+
+Plaintext📂 recon_example.com_20260715_164500/
+
 ├── 📄 subs_raw.txt             # Raw, deduplicated subdomains
+
 ├── 📄 alive_subs.txt           # Verified live HTTP/HTTPS applications
+
 ├── 📄 clean_hosts.txt          # Stripped, bare hostnames
+
 ├── 📄 resolved_ips.txt         # Unique target IPv4/IPv6 addresses
+
 ├── 📄 Port_scan_alive_subs     # Raw fast-scan port results
+
 ├── 📄 Service_Scan_alive_subs  # In-depth nmap service fingerprints
+
 └── 📂 screenshots/             # Visual gowitness captures
+
 
 
 
