@@ -107,7 +107,7 @@ HAVE_GOWITNESS=0; have gowitness && HAVE_GOWITNESS=1
 
 [ "$HAVE_HTTPX" -eq 0 ] && warn "httpx not found -- alive-check will use a basic curl fallback. Install: go install github.com/projectdiscovery/httpx/cmd/httpx@latest"
 [ "$HAVE_NAABU" -eq 0 ] && warn "naabu not found -- falling back to nmap for port discovery (slower). Install: go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest"
-[ "$HAVE_DNSX" -eq 0 ] && warn "dnsx not found -- IP resolution will use a getent/dig fallback. Install: go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest"
+[ "$HAVE_DNSX" -eq 0 ] && warn "dnsx not found -- IP resolution will use a getent/dig fallback. Don't need to install it !!!"
 [ "$HAVE_GOWITNESS" -eq 0 ] && warn "gowitness not found -- screenshots will be skipped. Install: go install github.com/sensepost/gowitness@latest"
 
 # ------------------------------ Output setup ----------------------------------
