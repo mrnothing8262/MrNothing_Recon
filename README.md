@@ -1,6 +1,7 @@
 # MrNothing_Recon.sh — Bug Bounty Subdomain Recon Pipeline
 
 **Version:** MrNothing_Recon_v2.sh 
+
 **Author:** Mr.Nothing
 
 A comprehensive, modular subdomain reconnaissance script designed for bug bounty hunters and penetration testers. It automates the entire workflow: subdomain discovery, alive‑check, wildcard‑DNS filtering, IP resolution, screenshots, port scanning, and service/version detection — all with a focus on speed and reliability.
