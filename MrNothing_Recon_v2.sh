@@ -118,7 +118,7 @@ banner() {
                                                     _/ |
                                                    |___/ 
 EOF
-    echo -e "${GREEN}                 R E C O N   T O O L   ( v 2 . 2 - d i g - g o b u s t e r )${NC}"
+    echo -e "${GREEN}                 R E C O N   T O O L   ( v 2 )${NC}"
     echo
 }
 banner
