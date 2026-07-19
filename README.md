@@ -46,7 +46,52 @@ The following tools must be installed and available in your `$PATH`:
 
 Clone the repository and make the script executable:
 
-```bash
-git clone https://github.com/yourusername/MrNothing_Recon.git
-cd MrNothing_Recon
-chmod +x MrNothing_Recon.sh
+``bash -------->
+                   git clone https://github.com/yourusername/MrNothing_Recon.git
+                   cd MrNothing_Recon
+                   chmod +x MrNothing_Recon.sh
+
+
+🚀 Usage ---------->
+                    Basic passive recon:
+
+      bash
+         ./MrNothing_Recon.sh example.com
+         
+  With active brute‑force:
+
+      bash
+         ./MrNothing_Recon.sh -w /path/to/subdomains.txt example.com
+
+
+
+📖 Summary of Changes in This Update
+Feature	v2.2                                     (new)	            Previous
+Wildcard DNS filtering	                          ✅	              ❌
+Active brute‑force (gobuster)	                    ✅ optional	      ❌
+Parallel dig resolution	                          ✅ (threaded)     ❌ (dnsx or sequential)
+Timeouts & fault tolerance	                      ✅	              ❌
+Background screenshots with logging	              ✅	              ❌
+Parallel service scans	                          ✅	              ❌
+Custom port‑list generation	                      ✅	              ❌
+Full documentation & requirements	                ✅	              ❌
+
+
+
+📁 Output Files
+    File	                                     Description
+subs_raw.txt ------------->	       All discovered subdomains (after dedup)
+alive_subs.txt ------------->      Subdomains that responded to HTTP/HTTPS
+clean_hosts.txt	------------->     Bare hostnames of all discovered subdomains
+resolved_ips.txt ------------->	   Unique IPv4/IPv6 addresses (wildcard‑filtered) used for scanning
+host_ip_map.txt	 ------------->    Every host → every resolved IP (unfiltered)
+wildcard_filtered_hosts.txt ---->  Hosts excluded because they only resolved to wildcard IPs
+screenshots/	------------->       PNG screenshots of alive hosts (by gowitness)
+port_scan_all_hosts.txt ------>    Raw port scan output
+service_scan_all_hosts.txt ------> nmap -sV version detection results
+
+
+
+⚠️ Disclaimer
+Only use this tool against targets you are authorised to test.
+Unauthorised scanning may violate laws and terms of service. You are solely responsible for your actions.
