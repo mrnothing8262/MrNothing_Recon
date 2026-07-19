@@ -68,27 +68,44 @@ Clone the repository and make the script executable:
 📖 Summary of Changes in This Update
 Feature	v2.2                                     (new)	            Previous
 Wildcard DNS filtering	                          ✅	              ❌
+
 Active brute‑force (gobuster)	                    ✅ optional	      ❌
+
 Parallel dig resolution	                          ✅ (threaded)     ❌ (dnsx or sequential)
+
 Timeouts & fault tolerance	                      ✅	              ❌
+
 Background screenshots with logging	              ✅	              ❌
+
 Parallel service scans	                          ✅	              ❌
+
 Custom port‑list generation	                      ✅	              ❌
+
 Full documentation & requirements	                ✅	              ❌
+
 
 
 
 📁 Output Files
     File	                                     Description
 subs_raw.txt ------------->	       All discovered subdomains (after dedup)
+
 alive_subs.txt ------------->      Subdomains that responded to HTTP/HTTPS
+
 clean_hosts.txt	------------->     Bare hostnames of all discovered subdomains
+
 resolved_ips.txt ------------->	   Unique IPv4/IPv6 addresses (wildcard‑filtered) used for scanning
+
 host_ip_map.txt	 ------------->    Every host → every resolved IP (unfiltered)
+
 wildcard_filtered_hosts.txt ---->  Hosts excluded because they only resolved to wildcard IPs
+
 screenshots/	------------->       PNG screenshots of alive hosts (by gowitness)
+
 port_scan_all_hosts.txt ------>    Raw port scan output
+
 service_scan_all_hosts.txt ------> nmap -sV version detection results
+
 
 
 
