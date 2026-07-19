@@ -1,4 +1,4 @@
-# MrNothing_Recon.sh — Bug Bounty Subdomain Recon Pipeline
+# MrNothing_Recon_v2.sh — Bug Bounty Subdomain Recon Pipeline
 
 **Version:** MrNothing_Recon_v2.sh 
 
